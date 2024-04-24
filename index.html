@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <script src="js/bai.js"></script>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="" id="toggler" />
+      <label for="toggler" class="fas fa-bars"></label>
+      <a href="#" class="logo">Bán xe<span>.</span></a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="">TRANG CHỦ</a></li>
+          <li><a href="">XE SỐ</a></li>
+          <li><a href="">XE TAY GA</a></li>
+          <li><a href="">XE CÔN TAY</a></li>
+          <li><a href="">TIN TỨC</a></li>
+          <li><a href="">DỊCH VỤ</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <!-- <a href="" class="fas fa-shopping-cart"></a> -->
+        <a href="login-register.html" class="fas fa-user"></a>
+      </div>
+    </header>
+
+    <div class="all">
+      <img
+        width="100%"
+        class="img-interface"
+        src="https://hoabinhminhxemay.com/template/images/banner-3.jpg"
+        alt=""
+      />
+      <div class="container">
+        <h1>Lựa chọn
+        </br>
+          phong cách của bạn</h1>
+          <div class="type_car_item">
+              <div class="type_car">
+                  <div class="type_car--name">
+                      <button class="btn">
+                          <a href="pages/xeso.html" class="type_car--name--link ">
+                              <img src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/pd-cate-1.png" class="type_car--img">
+                              <span>XE SỐ</span>
+                          </a>
+                      </button>
+                  </div>
+              </div>
+              <div class="type_car">
+                  <div class="type_car--name">
+                      <button class="btn">
+                          <a href="pages/xetayga.html" class="type_car--name--link">
+                              <img  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/pd-cate-3.png" class="type_car--img">
+                              <span>XE TAY GA</span>
+                          </a>
+                      </button>
+                  </div>
+              </div>
+              <div class="type_car">
+                  <div class="type_car--name">
+                      <button class="btn">
+                          <a href="pages/xecontay.html" class="type_car--name--link">
+                              <img  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/pd-cate-4.png" class="type_car--img">
+                              <span>XE CÔN TAY</span>
+                          </a>
+                      </button>
+                  </div>
+              </div>
+              
+          </div>
+    </div>
+    <div class="all_last">
+      <div class="card" id="listProduct">
+        <!-- <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/Winner-X-2024-Phien-ban-Tieu-Chuan-mau-Do-Den.jpg"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/Winner-X-2024-Phien-ban-Tieu-Chuan-mau-Do-Den.jpg"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/Winner-X-2024-Phien-ban-Tieu-Chuan-mau-Do-Den.jpg"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/Winner-X-2024-Phien-ban-Tieu-Chuan-mau-Do-Den.jpg"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/Winner-X-2024-Phien-ban-Tieu-Chuan-mau-Do-Den.jpg"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/Winner-X-2024-Phien-ban-Tieu-Chuan-mau-Do-Den.jpg"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/Winner-X-2024-Phien-ban-Tieu-Chuan-mau-Do-Den.jpg"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/Winner-X-2024-Phien-ban-Tieu-Chuan-mau-Do-Den.jpg"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/11/vario-125-the-thao-mau-xanh-den.png"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/11/vario-125-the-thao-mau-xanh-den.png"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <div class="content">
+              <div class="content1">Trả góp</div>
+              <div class="content2">Bán chạy</div>
+            </div>
+
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/Winner-X-2024-Phien-ban-Tieu-Chuan-mau-Do-Den.jpg"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <span>Gía bán:</span>
+            <span>Liên hệ</span>
+          </div>
+          <div class="product_icon">
+            <a href="#">
+              <img src="./img/tiki.png" alt="" class="product_icon-tiki" />
+            </a>
+            <a href="#">
+              <img src="./img/sendo.png" alt="" class="product_icon-sendo" />
+            </a>
+          </div>
+        </div> -->
+        <!-- <div class="product">
+          <div class="product_img">
+            <button class="product_ct">
+              <a href="#">XEM CHI TIẾT</a>
+            </button>
+            <div class="content">
+              <div class="content1">Trả góp</div>
+            </div>
+
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2023/11/vario-125-the-thao-mau-xanh-den.png"
+            />
+          </div>
+          <div class="product_link">
+            <a href="#">Winner X 2024</a>
+          </div>
+          <div class="price">
+            <h2>Giá bán:</h2>
+          </div>
+          <div class="product_icon">
+            <a href="#">
+              <img src="./img/tiki.png" alt="" class="product_icon-tiki" />
+            </a>
+            <a href="#">
+              <img src="./img/sendo.png" alt="" class="product_icon-sendo" />
+            </a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="slide-show">
+      <h1>KHUYẾN MÃI</h1>
+      <div class="slide-show-img">
+        <div class="item">
+          <img
+            src="https://hoabinhminhxemay.com/wp-content/uploads/2023/11/honda-vario-125-2024-370x250.jpg"
+            alt=""
+            class="item-img"
+          />
+          <p class="message">
+            Có nên mua Vario 125 được Honda Việt Nam phân phối chính hãng?
+          </p>
+        </div>
+        <div class="item">
+          <img
+            src="https://hoabinhminhxemay.com/wp-content/uploads/2024/02/vision-2024-phien-ban-co-dien-370x250.jpg"
+            alt=""
+            class="item-img"
+          />
+          <p class="message">
+            Có nên mua Vario 125 được Honda Việt Nam phân phối chính hãng?
+          </p>
+        </div>
+        <div class="item">
+          <img
+            src="https://hoabinhminhxemay.com/wp-content/uploads/2023/12/z4963644190375_ad4e83e4097a5125f298f2d7b8dafc89-370x250.jpg"
+            alt=""
+            class="item-img"
+          />
+          <p class="message">
+            Có nên mua Vario 125 được Honda Việt Nam phân phối chính hãng?
+          </p>
+        </div>
+        <div class="item">
+          <img
+            src="https://hoabinhminhxemay.com/wp-content/uploads/2024/02/vision-2024-phien-ban-co-dien-370x250.jpg"
+            alt=""
+            class="item-img"
+          />
+          <p class="message">
+            Có nên mua Vario 125 được Honda Việt Nam phân phối chính hãng?
+          </p>
+        </div>
+        <div class="item">
+          <img
+            src="https://hoabinhminhxemay.com/wp-content/uploads/2023/11/honda-vario-125-2024-370x250.jpg"
+            alt=""
+            class="item-img"
+          />
+          <p class="message">
+            Có nên mua Vario 125 được Honda Việt Nam phân phối chính hãng?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-service">
+      <div class="service">
+        <div class="columns-service">
+          <div class="column-left">
+            <h2 class="service-title">Dịch vụ</h2>
+            <div class="infomation">
+              <span class="text">
+                Với hệ thống xưởng sửa chữa chuyên nghiệp và có mật độ trải rộng
+                khắp toàn quốc, chúng tôi có thể đáp ứng nhu cầu của khách hàng
+                thông qua việc cung cấp các dịch vụ sửa chữa đa dạng và chất
+                lượng theo tiêu chuẩn chuyên nghiệp của hãng, tận tâm, uy tín.
+              </span>
+            </div>
+            <div class="detail-btn">
+              <a href="#" class="detail-btn-action">Xem chi tiết</a>
+            </div>
+          </div>
+          <div class="column-right">
+            <img
+              src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/home-services.jpg"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="service-choose">
+        <div class="service-columns">
+          <div class="servicebtn">
+            <div class="service-item">
+              <div class="service-icon">
+                <img
+                  width="55px"
+                  height="55px"
+                  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/sv-1.png"
+                  class="service-btn"
+                />
+              </div>
+              <h3 class="service-title">
+                <a href="services/service.html">Dịch vụ sửa chữa</a>
+              </h3>
+            </div>
+          </div>
+          <div class="servicebtn">
+            <div class="service-item">
+              <div class="service-icon">
+                <img
+                  width="55px"
+                  height="55px"
+                  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/sv-2.png"
+                  class="service-btn"
+                />
+              </div>
+              <h3 class="service-title">
+                <a href="services/service.html">Chế độ bảo hành</a>
+              </h3>
+            </div>
+          </div>
+          <div class="servicebtn">
+            <div class="service-item">
+              <div class="service-icon">
+                <img
+                  width="55px"
+                  height="55px"
+                  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/sv-3.png"
+                  class="service-btn"
+                />
+              </div>
+              <h3 class="service-title">
+                <a href="services/service.html">Bảo dưỡng định kì</a>
+              </h3>
+            </div>
+          </div>
+          <div class="servicebtn">
+            <div class="service-item">
+              <div class="service-icon">
+                <img
+                  width="55px"
+                  height="55px"
+                  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/sv-4.png"
+                  class="service-btn"
+                />
+              </div>
+              <h3 class="service-title">
+                <a href="services/service.html">Phụ tùng phụ kiện</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="ads_and_hotline">
+      <div class="all_ads_and_hotline">
+        <div class="ads">
+          <div class="video_ads">
+            <div class="video_wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/o6wtDPVkKqI?si=I2FxGeA3EIJhi6Kc"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+              <a
+                class="play_button"
+                href="https://www.youtube.com/watch?v=o6wtDPVkKqI?si=I2FxGeA3EIJhi6Kc"
+                target="_blank"
+              >
+                <i class="fa fa-play"></i>
+              </a>
+            </div>
+          </div>
+          <div class="list_ads">
+            <div class="header_ads">
+              <span>TIN TỨC & SỰ KIỆN</span>
+              <div class="view_all">
+                <a href="https://phattien.com/chuyen-muc/tin-thi-truong"
+                  >Xem tất cả</a
+                >
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space"></div>
+        <div class="hotline">
+          <div class="hotline_information" id="hotline_ads">
+            <div class="call_box">
+              <img
+                src="https://phattien.com/wp-content/uploads/2019/09/icon-hl-user.png"
+                alt=""
+              />
+              <span class="call_box_text">Khách hàng cá nhân</span>
+              <a class="call_phone_link" href="tel:1800.1001">1800.1001</a>
+            </div>
+          </div>
+          <div class="hotline_information">
+            <img
+              src="https://phattien.com/wp-content/uploads/2019/09/icon-hl-users.png"
+              alt=""
+            />
+            <span class="call_box">Khách hàng doanh nghiệp</span>
+            <a class="call_phone_link" href="tel:0971298231">0971298231</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer" class="footer">
+      <div class="footer1">
+        <div class="container_footer">
+          <div class="column">
+            <a href="tel:180000" class="intro-item">
+              <span class="intro-icon">
+                <img
+                  width="60px"
+                  height="60px"
+                  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/intro-1.png"
+                />
+              </span>
+              <p class="intro-title">
+                Liên hệ với chúng tôi để biết thêm thông tin
+              </p>
+            </a>
+          </div>
+          <div class="column">
+            <a href="maps/map.html" class="intro-item">
+              <span class="intro-icon">
+                <img
+                  width="60"
+                  height="60"
+                  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/intro-2.png"
+                />
+              </span>
+              <p class="intro-title">Hệ thống cửa hàng</p>
+            </a>
+          </div>
+          <div class="column">
+            <a href="mailto: 21511200xx@ut.edu.vn" class="intro-item">
+              <span class="intro-icon">
+                <img
+                  width="60px"
+                  height="60px"
+                  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/intro-3.png"
+                />
+              </span>
+              <p class="intro-title">Gửi mail</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer2">
+        <div class="container_footer2">
+          <div class="columns">
+            <div class="column_footer_column" id="column1">
+              <p class="footer_title" id="footer-company">
+                Công ty cố phần đồ án nhóm xxxx
+              </p>
+              <div class="infomation">
+                <p>Đơn vị tập đoàn nhóm xxxx</p>
+              </div>
+              <ul class="footer-info">
+                <li>Trường đại học giao thông vận tải thành phố Hồ Chí Minh</li>
+                <li>Cơ sở 3 quận 12 thành phố Hồ Chí Minh</li>
+                <li>
+                  <div class="cskh">
+                    <span id="phone-call">Tổng đài khu vực miền Nam </span>
+                  </div>
+                  <div id="phone1">
+                    <span id="phone-call">-Đồ án xe máy nhóm xx: 1800xxxx</span>
+                  </div>
+                  <div id="phone2">
+                    <span id="phone-call">-Đồ án xe máy nhóm xx: 1800xxxx</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="kc"></div>
+                  <div id="cskh2">
+                    <span id="phone-call">Tổng đài hỗ trợ miền Bắc:</span>
+                  </div>
+                  <div id="phone3">
+                    <span id="phone-call">-xe máy đồ án......... </span>
+                  </div>
+                  <p>Email: 21511200xx@ut.edu.vn</p>
+                </li>
+                <li id="time">
+                  <p id="time1">Thời gian mở cửa</p>
+                  <p id="time2">7h - 20h</p>
+                  <p>Tất cả các ngày trong tuần</p>
+                </li>
+              </ul>
+            </div>
+            <div class="column_footer_column" id="column2">
+              <div class="quick_link">
+                <p id="quick_link">Liên kết nhanh</p>
+                <ul id="list_link">
+                  <li>
+                    <a class="link_home" href="index.html">Trang chủ</a>
+                  </li>
+                  <li><a class="event_link" href="#">Sự kiện</a></li>
+                  <li>
+                    <a class="link_store" href="maps/map.html">Cửa hàng</a>
+                  </li>
+                  <li>
+                    <a class="link_service" href="services/service.html">Dịch vụ</a>
+                  </li>
+                  <li>
+                    <a class="link_thanhtoan" href="information-payment.html"
+                      >Hình thức thanh toán</a
+                    >
+                  </li>
+                  <li>
+                    <a class="link_huong_dan_mua_hang" href="quickLinks/tutorial.html"
+                      >Hướng dẫn mua hàng</a
+                    >
+                  </li>
+                  <li>
+                    <a class="link_chinh_sach_giao_hang" href="quickLinks/ship-policy.html"
+                      >Chính sách giao hàng</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="link_chinh_sach_bao_mat_thong_tin"
+                      href="quickLinks/policy-information.html"
+                      >Chính sách bảo mật thông tin</a
+                    >
+                  </li>
+                  <li>
+                    <a class="link_chia_se_kien_thuc" href="#"
+                      >Chia sẻ kiến thức</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="column_footer_column" id="column3">
+              <div class="socail">
+                <p id="connect_us">Liên hệ với chúng tôi</p>
+                <div class="social_icon">
+                  <a href="https://www.instagram.com/"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="https://www.facebook.com/"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                  <a href="https://www.youtube.com/"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a href="https://twitter.com/?lang-en"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="img">
+                <img
+                  src="https://i.pinimg.com/736x/f8/9b/1c/f89b1c7d38d8fc67d7199a11a10234cd.jpg"
+                  height="200px"
+                  width="300px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer_end>
+      <div class="footer_end">
+        <p class="ban_quyen">Bản quyền thuộc về: Đồ án không có bản quyền</p>
+      </div>
+    </footer_end>
+    <div id="progress">
+      <span id="progress-value">&#x1F815;</span>
+    </div>
+
+    <script>
+      const listImg = document.querySelector(".slide-show-img");
+      const imgs = document.querySelectorAll(".item");
+      const length = imgs.length;
+      let curren = 0;
+
+      setInterval(() => {
+        if (curren == length - 1) {
+          curren = 0;
+          let width = imgs[0].offsetWidth;
+          listImg.style.transform = `translateX(${
+            (width + 30) * -1 * curren
+          }px)`;
+        } else {
+          curren++;
+          let width = imgs[0].offsetWidth;
+          listImg.style.transform = `translateX(${
+            (width + 30) * -1 * curren
+          }px)`;
+        }
+      }, 4000);
+    
+    </script>
+    <script src="js/util-render.js"></script>
+    <script src="js/render-index.js"></script>
+    
+  </body>
+</html>

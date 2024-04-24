@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EEEEEE;
+}
+.infomation-payment{
+    position: fixed;
+    top: 0;
+}
+
+.continue-payment{
+    position: fixed;
+    bottom: 0;
+}
+.infomation-payment, .warning, .continue-payment {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 800px;
+    height: 50px;
+    background-color: #fff;
+}
+
+.infomation-payment i{
+    margin-left: 10px;
+}
+.infomation-payment h3::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    margin-right: 10px;
+}
+.infomation-payment i{
+    border-radius: 50%;
+}
+.infomation-payment i:hover{
+    cursor: pointer;
+    background-color: #CCCCCC;
+}
+
+
+.warning{
+    justify-content: space-between;
+    width: 750px;
+    border-radius: 20px;
+    background-color: #FFCC66;
+}
+.warning i{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.warning #exit:hover{
+    cursor: pointer;
+    background-color: #FF9933;
+    border-radius: 50%;
+}
+.invoice-informatio{
+    margin-top: 40px;
+}
+.information-content, .customer-content, .payment-content{
+    width: 800px;
+    border-radius: 20px;
+    
+}
+.invoice-information, .customer-information, .payments{
+    margin-top: 20px;
+    width: 800px;
+    background-color: #fff;
+    border-radius: 20px;
+    
+}
+.invoice{
+    margin-top: 20px;
+}
+.infomation, .customer-infor-content, .payment-content{
+    background-color: #EEEEEE;
+    color: #666666;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.infomation h4, .customer-infor-content h4, .payment-content h4{
+    margin-left: 10px;
+}
+#trademark-logo img{
+    height: 20px;
+    width: 20px;
+}
+.trademark, .customer-name {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.trademark #ID{
+    width: 70px;
+    background-color: #666666;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.space{
+    height: 1px;
+    background-color: #666666;
+    margin: 10px 10px 10px 10px;
+}
+.product{
+    display: flex;
+}
+.image-product{
+    width: 30%;
+}
+.image-product img{
+    height: 100px;
+    width: 300px;
+    width: 100%;
+}
+.product .parameter{
+    color: #666666;
+    font-style: bold;
+    font-weight: 500px;
+    margin-top: 2px;
+    width: 60%;
+    margin-left: 10%;
+    margin-right: 10px;
+}
+.type, .year, .cc, .color{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.price h3{
+    color: #CCCCCC;
+}
+.customer-name img {
+    border-radius: 50%;
+    width: 40px; /* Điều chỉnh kích thước ảnh nếu cần thiết */
+    height: 30px;
+    object-fit: cover;
+}
+.customer-name i:hover{
+    cursor: pointer;
+}
+.customer-phone{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.transfer, .cash, .installment{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.installment:hover, .cash{
+    cursor: not-allowed;
+}
+.continue-payment{
+    height: 70px;
+}
+.continue-payment {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+.btn{
+    width: 700px;
+    height: 50px;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    border-radius: 30px;
+    background-color: #666666;
+}
+.btn:hover {
+    cursor: pointer;
+}

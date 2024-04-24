@@ -1,0 +1,20 @@
+.container-payment{
+    height: 400px;
+    margin-top: 100px;
+}
+.payment-title{
+    margin-left: 150px;
+}
+.giao-hang-truc-tiep, .thanh-toan-ngan-hang{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.thanh-toan-ngan-hang p, .giao-hang-truc-tiep p{
+    font-size: 15px;
+}
+.giao-hang-truc-tiep{
+    margin-top: 40px;
+}
+.thanh-toan-ngan-hang{
+    margin-top: 50px;
+}

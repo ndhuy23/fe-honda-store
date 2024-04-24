@@ -1,0 +1,15 @@
+.container-tutorial{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+.huong-dan-mua-hang p,.chi-tiet-lien-he p{
+    font-size: 15px;
+    margin-top: 20px;
+}
+.chi-tiet-lien-he h2{
+    margin-top: 20px;
+}
+.chi-tiet-lien-he span#title {
+    margin-top: 20px;
+    font-size: 15px;
+}

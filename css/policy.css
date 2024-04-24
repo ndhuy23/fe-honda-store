@@ -1,0 +1,16 @@
+.container-policy{
+    height: 500px;
+    margin-top: 130px;
+}
+.policy-title{
+    margin-left: 150px;
+}
+.giao-hang-truc-tiep, .thanh-toan-ngan-hang{
+    width: 1300px;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.giao-hang-truc-tiep p, .thanh-toan-ngan-hang p {
+    font-size: 14px;
+    margin-top: 10px;
+}
