@@ -46,6 +46,7 @@ fetch(API_BASE_URL + `/api/Storage/${productId}/colors/${colorId}`, {
 paymentHTML.addEventListener("click",(event) => {
     event.preventDefault();
     const price = priceHTML.textContent
+    console.log(localStorage.getItem("token"))
     const data = {
         customerId: localStorage.getItem("userId"),
         products: [
@@ -62,7 +63,7 @@ paymentHTML.addEventListener("click",(event) => {
         method: "POST",
         headers:{
             'Content-Type': 'application/json',
-            'Authorization' : `Bearer ${localStorage.getItem("jwtToken")}`
+            'Authorization' : `Bearer ${localStorage.getItem("token")}`
         },
         body: JSON.stringify(data)
     })
@@ -71,14 +72,26 @@ paymentHTML.addEventListener("click",(event) => {
         const payment = {
             storeName: "Honda Store",
             orderId: response.data.orderId,
-            
+            orderInfo: productHTML.textContent,
+            amount: response.data.amount,
+            userInfo: {
+                userId: localStorage.getItem("userId"),
+                name: localStorage.getItem("fullName")
+            },
+            lang: 'vi',
+            paymentType: 0     
         }
         fetch(API_BASE_URL + '/api/Payment',{
             method: "POST",
             headers:{
                 'Content-Type': 'application/json',
-                'Authorization' : `Bearer ${localStorage.getItem("jwtToken")}`
+                'Authorization' : `Bearer ${localStorage.getItem("token")}`
             },
+            body: JSON.stringify(payment)
+        })
+        .then(response => response.json())
+        .then(response => {
+            window.location.href = response.data.payUrl;
         })
     })
 })
