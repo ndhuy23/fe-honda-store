@@ -9,6 +9,8 @@
       href="../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.css"
     />
     <link rel="stylesheet" href="../css/payement.css" />
+    <script src="../js/constants.js"></script>
+
   </head>
   <body>
     <div class="container">
@@ -39,32 +41,31 @@
                 <div id="trademark-logo">
                     <img src="https://th.bing.com/th/id/OIP.WQbyRvlPXweKlC9DlByhUwHaHa?w=500&h=500&rs=1&pid=ImgDetMain" alt="">
                 </div>
-                <div id="ID">ID: 999</div>
             </div>
             <div class="space">
 
             </div>
             <div class="product">
                 <div class="image-product">
-                    <img src="https://cdn.honda.com.vn/motorbike-strong-points/December2021/WMEngvsSThKsMbQYvxXx.jpg" alt="">
+                    <img src="" id="image" alt="">
                 </div>
                 <div class="parameter">
                     <div class="type">
-                        <span>Loại xe</span>
-                        <span>Mới</span>
+                        <span>Tên xe</span>
+                        <span id="nameProduct"></span>
                     </div>
                     <div class="year">
-                        <span>Năm sản xuất</span>
-                        <span>2024</span>
+                        <span>Màu xe</span>
+                        <span id="color"></span>
                     </div>
-                    <div class="cc">
+                    <!-- <div class="cc">
                         <span>Động cơ(phân khối)</span>
                         <span>125cc</span>
                     </div>
                     <div class="color">
                         <span>Màu sắc</span>
                         <img>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="space">
@@ -72,7 +73,7 @@
             </div>
             <div class="price">
                 <h3>Giá sản phẩm</h3>
-                <div class="value">100.000.000</div>
+                <div class="value" id="price"></div>
             </div>
         </div>
       </div>
@@ -83,14 +84,11 @@
       </div>
       <div class="customer-information">
         <div class="container-customer">
-          <div class="customer-name">
-              <img src="https://th.bing.com/th/id/OIP.h5gQnqiA1hXFhJxJ6q082gHaH8?rs=1&pid=ImgDetMain" alt="">
-              <i class="fa fa-angle-right" aria-hidden="true"></i>
-          </div>
           <div class="customer-phone">
-            <i class="fa fa-phone" aria-hidden="true"></i><br/><br/>
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+              <span id="name"></span>
           </div>
+          
         </div>
       </div>
       <div class="payment-content">
@@ -100,22 +98,23 @@
           <div class="transfer">
               <h4>Chuyển khoản</h4>
           </div>
-          <div class="cash">
+          <!-- <div class="cash">
               <h4>Tiền mặt</h4>
           </div>
           <div class="installment">
               <h4>Trả góp</h4>
-          </div>
+          </div> -->
       </div>
       <br/>
       <br/><br/>
       <br/>
       <br/>
       <div class="continue-payment">
-        <div class="btn">
+        <a class="btn" id="payment">
             <h4>Thanh toán</h4>
-        </div>
+        </a>
       </div>
     </div>
   </body>
+  <script src="../js/render-payment.js"></script>
 </html>

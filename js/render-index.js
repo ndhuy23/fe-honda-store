@@ -1,7 +1,7 @@
 let listProductHTML = document.getElementById("listProduct");
+localStorage.clear();
 const card = document.querySelector('.card');
-
- fetch("https://localhost:7085/api/Product?pageIndex=1&pageSize=10", {
+ fetch( API_BASE_URL + "/api/Product?pageIndex=1&pageSize=10", {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'

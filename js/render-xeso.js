@@ -7,7 +7,7 @@ function renderByCategory(categoryname){
         page: 1,
         pageSize : 15
     };
-    fetch("https://localhost:7085/getByCategory", {
+    fetch(API_BASE_URL + "/api/Product/category", {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'

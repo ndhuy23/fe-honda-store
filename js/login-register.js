@@ -1,6 +1,7 @@
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
+
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
 });
@@ -19,18 +20,46 @@ function login(event) {
       Password: password,
     };
 
-    fetch("https://localhost:7103/login", {
+    fetch(API_BASE_URL + '/api/User', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
     })
-      .then((response) => response.json())
+      // .then((response) => response.json())
+      // .then((response) => {
+      //   console.log("Server response:", response);
+      //   //localStorage.setItem("user", response.data);
+      //   //window.location.href = "/index.html"
+      // })
       .then((response) => {
-        console.log("Server response:", response.data.fullName);
-        localStorage.setItem("user", response.data);
-        window.location.href = "/index.html"
+        if (response.status === 401) {
+            console.log("Unauthorized");
+            alert("Tài khoản hoặc mật khẩu chưa chính xác")
+            // Thực hiện các hành động khi bị từ chối truy cập
+        } else {
+            return response.json();
+        }
+      })
+      .then((response) => {
+          if (response) {
+              console.log("Server response:", response);
+              localStorage.setItem("token",response.jwtToken);
+              localStorage.setItem("fullName", response.fullName);
+              localStorage.setItem("userName", response.userName);
+              localStorage.setItem("userId", response.userId);
+              const redirectTo = localStorage.getItem('redirectTo');
+              if (redirectTo) {
+                // Xoá thông tin trang trước đó khỏi LocalStorage
+                localStorage.removeItem('redirectTo');
+                // Chuyển hướng người dùng đến trang trước đó
+                window.location.href = redirectTo;
+              }else{
+                window.location.href = 'index.html';
+              }
+              // Thực hiện các hành động với phản hồi hợp lệ
+          }
       })
       .catch(error => {
         console.log("Login Error");

@@ -32,6 +32,19 @@ function createSwiper() {
       console.log(err);
     }
   });
+  const colorSpans = document.querySelectorAll('.cl-picker');
+  // Vòng lặp qua từng thẻ span và thêm sự kiện click
+  colorSpans.forEach(span => {
+    span.addEventListener('click', () => {
+      // Xóa class 'selected' từ tất cả các thẻ span
+      colorSpans.forEach(span => {
+        span.classList.remove('selected');
+      });
+  
+      // Thêm class 'selected' vào thẻ span được bấm
+      span.classList.add('selected');
+    });
+  });
 }
 
 function renderPDdetail() {
@@ -40,7 +53,7 @@ function renderPDdetail() {
   // Lấy giá trị của tham số "productid" từ URL
   const productId = url.searchParams.get("productid");
 
-  fetch(`https://localhost:7085/api/Product/${productId}`)
+  fetch(API_BASE_URL + `/api/Product/${productId}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to fetch Product');
@@ -69,7 +82,7 @@ function renderPDdetail() {
       console.error('Error:', error);
     });
 
-  fetch(`https://localhost:7085/api/Storage/${productId}`)
+  fetch(API_BASE_URL + `/api/Storage/${productId}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to fetch product colors');
@@ -93,10 +106,11 @@ function renderPDdetail() {
         const productColor = productColors[i];
         const pickerElement = document.createElement('span');
         pickerElement.classList.add('cl-picker');
-        pickerElement.setAttribute('data-cl', i);
+        if(i==0) pickerElement.classList.add('selected');
+        pickerElement.setAttribute('data-cl', productColor.colorId);
         pickerElement.setAttribute('data-imgs', productColor.images);
 
-        const fetchColorPromise = fetch('https://localhost:7085/api/Color', {
+        const fetchColorPromise = fetch(API_BASE_URL + '/api/Color/ids', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -156,7 +170,7 @@ function renderPDdetail() {
     });
 
   const smrDiv = document.querySelector('.smr.center-txt');
-  fetch(`https://localhost:7085/api/Product/${productId}`)
+  fetch(API_BASE_URL + `/api/Product/${productId}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to fetch Product');
@@ -210,7 +224,7 @@ function renderPDdetail() {
     });
 
   const featP = document.querySelector('.feat');
-  fetch(`https://localhost:7085/api/Product/${productId}`)
+  fetch(API_BASE_URL + `/api/Product/${productId}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to fetch Product');
@@ -247,7 +261,7 @@ function renderPDdetail() {
     });
 
     const dacTinh = document.getElementById('dactinh');
-    fetch(`https://localhost:7085/api/Product/${productId}`)
+    fetch(API_BASE_URL + `/api/Product/${productId}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to fetch Product');
@@ -332,7 +346,7 @@ function renderPDdetail() {
       return liElement;
     };
   
-    fetch(`https://localhost:7085/api/Product/${productId}`)
+    fetch(API_BASE_URL + `/api/Product/${productId}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch Product');
@@ -381,7 +395,7 @@ function renderPDdetail() {
         return liElement;
       };
     
-      fetch(`https://localhost:7085/api/Storage/${productId}`)
+      fetch(API_BASE_URL + `/api/Storage/${productId}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Failed to fetch product colors');

@@ -16,6 +16,7 @@
 .continue-payment{
     position: fixed;
     bottom: 0;
+    background-color: #EEEEEE;
 }
 .infomation-payment, .warning, .continue-payment {
     display: flex;
@@ -73,7 +74,7 @@
     width: 800px;
     background-color: #fff;
     border-radius: 20px;
-    
+    margin-bottom: 20px;
 }
 .invoice{
     margin-top: 20px;
@@ -117,7 +118,7 @@
     width: 30%;
 }
 .image-product img{
-    height: 100px;
+    height: 150px;
     width: 300px;
     width: 100%;
 }
@@ -144,14 +145,19 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+.price div{
+    color: #e23434;
+    font-size: 25px;
+}
 .price h3{
     color: #CCCCCC;
 }
-.customer-name img {
+.customer-name i {
     border-radius: 50%;
-    width: 40px; /* Điều chỉnh kích thước ảnh nếu cần thiết */
+    width: 30px; /* Điều chỉnh kích thước ảnh nếu cần thiết */
     height: 30px;
     object-fit: cover;
+    margin-left: 5px;
 }
 .customer-name i:hover{
     cursor: pointer;
@@ -159,10 +165,13 @@
 .customer-phone{
     margin-top: 20px;
     margin-left: 30px;
+    margin-bottom: 10px;
+    margin-right: 30px;
 }
 .transfer, .cash, .installment{
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-bottom: 20px;
 }
 .installment:hover, .cash{
     cursor: not-allowed;
@@ -174,7 +183,12 @@
     display: flex;
     justify-content: center; /* Căn giữa theo chiều ngang */
     align-items: center; /* Căn giữa theo chiều dọc */
+    background-color: #EEEEEE;
   }
+a.btn{
+    text-decoration: none;
+    color: #ffffff;
+}
 .btn{
     width: 700px;
     height: 50px;
@@ -182,7 +196,7 @@
     justify-content: center; /* Căn giữa theo chiều ngang */
     align-items: center; /* Căn giữa theo chiều dọc */
     border-radius: 30px;
-    background-color: #666666;
+    background-color: #e23434;
 }
 .btn:hover {
     cursor: pointer;
