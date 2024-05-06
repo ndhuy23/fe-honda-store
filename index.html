@@ -20,17 +20,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-  <script src="js/constants.js"></script>
+
+    <script src="js/constants.js"></script>
     <script src="js/bai.js"></script>
   </head>
   <body>
     <header>
       <input type="checkbox" name="" id="toggler" />
       <label for="toggler" class="fas fa-bars"></label>
-      <a href="#" class="logo">Bán xe<span>.</span></a>
+      <a href="#" class="logo">Bán xe</a>
       <nav class="navbar">
         <ul>
-          <li><a href="">TRANG CHỦ</a></li>
+          <li><a href="./index.html">TRANG CHỦ</a></li>
           <li><a href="">XE SỐ</a></li>
           <li><a href="">XE TAY GA</a></li>
           <li><a href="">XE CÔN TAY</a></li>
@@ -52,42 +53,50 @@
         alt=""
       />
       <div class="container">
-        <h1>Lựa chọn
-        </br>
-          phong cách của bạn</h1>
-          <div class="type_car_item">
-              <div class="type_car">
-                  <div class="type_car--name">
-                      <button class="btn">
-                          <a href="pages/xeso.html" class="type_car--name--link ">
-                              <img src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/pd-cate-1.png" class="type_car--img">
-                              <span>XE SỐ</span>
-                          </a>
-                      </button>
-                  </div>
-              </div>
-              <div class="type_car">
-                  <div class="type_car--name">
-                      <button class="btn">
-                          <a href="pages/xetayga.html" class="type_car--name--link">
-                              <img  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/pd-cate-3.png" class="type_car--img">
-                              <span>XE TAY GA</span>
-                          </a>
-                      </button>
-                  </div>
-              </div>
-              <div class="type_car">
-                  <div class="type_car--name">
-                      <button class="btn">
-                          <a href="pages/xecontay.html" class="type_car--name--link">
-                              <img  src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/pd-cate-4.png" class="type_car--img">
-                              <span>XE CÔN TAY</span>
-                          </a>
-                      </button>
-                  </div>
-              </div>
-              
+        <h1>Lựa chọn phong cách của bạn</h1>
+        <div class="type_car_item">
+          <div class="type_car">
+            <div class="type_car--name">
+              <button class="btn">
+                <a href="pages/xeso.html" class="type_car--name--link">
+                  <img
+                    src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/pd-cate-1.png"
+                    class="type_car--img"
+                  />
+
+                  <span>XE SỐ</span>
+                </a>
+              </button>
+            </div>
           </div>
+          <div class="type_car">
+            <div class="type_car--name">
+              <button class="btn">
+                <a href="pages/xetayga.html" class="type_car--name--link">
+                  <img
+                    src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/pd-cate-3.png"
+                    class="type_car--img"
+                  />
+                  <span>XE TAY GA</span>
+                </a>
+              </button>
+            </div>
+          </div>
+          <div class="type_car">
+            <div class="type_car--name">
+              <button class="btn">
+                <a href="pages/xecontay.html" class="type_car--name--link">
+                  <img
+                    src="https://hoabinhminhxemay.com/wp-content/uploads/2021/02/pd-cate-4.png"
+                    class="type_car--img"
+                  />
+                  <span>XE CÔN TAY</span>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="all_last">
       <div class="card" id="listProduct">
@@ -615,7 +624,9 @@
                     <a class="link_store" href="maps/map.html">Cửa hàng</a>
                   </li>
                   <li>
-                    <a class="link_service" href="services/service.html">Dịch vụ</a>
+                    <a class="link_service" href="services/service.html"
+                      >Dịch vụ</a
+                    >
                   </li>
                   <li>
                     <a class="link_thanhtoan" href="information-payment.html"
@@ -623,12 +634,16 @@
                     >
                   </li>
                   <li>
-                    <a class="link_huong_dan_mua_hang" href="quickLinks/tutorial.html"
+                    <a
+                      class="link_huong_dan_mua_hang"
+                      href="quickLinks/tutorial.html"
                       >Hướng dẫn mua hàng</a
                     >
                   </li>
                   <li>
-                    <a class="link_chinh_sach_giao_hang" href="quickLinks/ship-policy.html"
+                    <a
+                      class="link_chinh_sach_giao_hang"
+                      href="quickLinks/ship-policy.html"
                       >Chính sách giao hàng</a
                     >
                   </li>
@@ -707,10 +722,8 @@
           }px)`;
         }
       }, 4000);
-    
     </script>
     <script src="js/util-render.js"></script>
     <script src="js/render-index.js"></script>
-    
   </body>
 </html>
