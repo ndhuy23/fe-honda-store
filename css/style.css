@@ -116,19 +116,20 @@ h1 {
 }
 /* product */
 .all_last {
-  width: 1120px;
-  margin: 0 140px 25px;
-  display: flex;
+  margin: 0 14rem;
 }
 .card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .product {
-  width: 250px;
+  width: 30rem;
   height: 310px;
   position: relative;
-  background-color: #f8f8f8;
+  background-color: var(--zinc-50);
   border-radius: 4px;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -137,7 +138,7 @@ h1 {
 .product_img {
   position: absolute;
   width: 100%;
-  height: 190px;
+  height: 20rem;
 }
 .product_img::before {
   content: "";
@@ -150,7 +151,8 @@ h1 {
   position: absolute;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .product_ct {
@@ -164,7 +166,8 @@ h1 {
   height: 34px;
   background-color: white;
   cursor: pointer;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .product_ct a {
   text-decoration: none;
@@ -172,7 +175,6 @@ h1 {
   font-weight: bold;
   border: none;
   outline: none;
-
   text-align: center;
 }
 
@@ -214,10 +216,14 @@ h1 {
 }
 
 .product:hover .product_ct {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
 }
 .product:hover .product_img::before {
-  display: block;
+  opacity: 0.5;
+  visibility: visible;
+  transition: all 0.5s;
 }
 .product_ct:hover {
   background-color: #ef3e2a;
@@ -335,7 +341,6 @@ h1 {
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   transition: 0.2s linear;
 }
 html {
@@ -468,12 +473,22 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 1.8rem;
 }
 
 .footer1 .container_footer .column {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.intro-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.2rem;
 }
 
 .intro-icon {
@@ -485,8 +500,7 @@ footer {
   display: inline-block;
   vertical-align: middle;
   color: white;
-  margin-top: 1rem;
-  font-size: 14px;
+  font-size: 1.6rem;
   text-align: center;
   white-space: normal;
   overflow: hidden;
@@ -510,10 +524,10 @@ footer {
 }
 
 .container_footer2 {
-  height: 400px;
   width: 100%;
   background-color: #2a2a2a;
   display: flex;
+  padding: 20px;
 }
 .container-service {
   position: relative;
@@ -550,14 +564,15 @@ footer {
 .columns-service {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-left: 100px;
   margin-right: 100px;
 }
 
 .column-right img {
+  border-radius: var(--border-md);
   max-width: 100%;
   height: auto;
-  margin-top: 10px;
 }
 
 .column-left,
@@ -642,10 +657,10 @@ h2.service-title {
   margin-right: 200px;
 }
 .servicebtn {
-  background-color: white;
+  background-color: var(--red-50);
   justify-content: center;
-  width: 207px;
-  height: 170px;
+  width: 20rem;
+  height: 17rem;
   border-radius: 10%;
 }
 .service-icon {
@@ -657,28 +672,25 @@ h2.service-title {
 .service-icon img {
   width: 55px;
   height: 55px;
+  filter: invert(12%) sepia(2%) saturate(1631%) hue-rotate(202deg)
+    brightness(94%) contrast(89%);
 }
 .service-title a {
   font-size: 18px; /* Giá trị kích thước chữ nhỏ hơn */
-  color: black;
+  color: var(--zinc-600);
   text-decoration: none;
 }
 .service-title {
   text-align: center;
 }
-.service-title a:hover {
-  text-decoration: underline;
-}
-.servicebtn:hover {
-  background-color: red;
-}
 
 .servicebtn:hover .service-title a {
-  color: white;
+  color: var(--red-500);
+  transition: all 0.4s;
 }
 .servicebtn:hover .service-icon img {
-  filter: brightness(50%) hue-rotate(90deg);
-  transition: filter 0.3s;
+  filter: none;
+  transition: filter 0.4s;
 }
 .service-columns {
   display: flex;
@@ -729,10 +741,6 @@ h2.service-title {
   width: 100%;
 }
 
-.container_footer2 {
-  padding: 20px;
-}
-
 .columns {
   display: flex;
   width: 100%;
@@ -755,14 +763,17 @@ h2.service-title {
 
 .infomation {
   padding-top: 20px;
-  color: #ef3e2a;
+  color: var(--red-500);
   font-size: 20px;
 }
 
 .footer-info {
-  padding-top: 10px;
+  padding-top: 1.5rem;
   list-style: none;
   color: #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   font-size: 15px;
 }
 
@@ -780,7 +791,7 @@ h2.service-title {
   font-weight: bold;
 }
 #time2 {
-  color: red;
+  color: var(--red-500);
   font-weight: bold;
 }
 #quick_link {
@@ -803,18 +814,19 @@ h2.service-title {
 }
 .social_icon {
   display: flex;
-  justify-items: center;
-  justify-content: space-between;
+  gap: 3.2rem;
 }
 .social_icon i {
   font-size: 34px; /* Set the initial size of the icons */
   transition: transform 0.3s ease; /* Add a smooth transition effect */
-  color: #f8f8f8;
+  color: var(--red-50);
   cursor: pointer;
 }
 
 .social_icon i:hover {
   transform: scale(1.2); /* Enlarge the icons on hover */
+  color: var(--red-500);
+  transition: all 0.3s;
 }
 .img {
   text-align: center;
@@ -822,9 +834,10 @@ h2.service-title {
 }
 .footer_end {
   display: flex;
-  background-color: #000;
+  background-color: var(--zinc-900);
   padding: 10px;
-  color: #f8f8f8;
+  color: var(--zinc-50);
+  font-size: 1.4rem;
   text-align: center;
   justify-content: center;
 }
@@ -849,20 +862,25 @@ h2.service-title {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 900px;
+  margin: 5.4rem 0;
 }
 .all_ads_and_hotline {
+  display: flex;
   width: 80%;
   height: 700px;
+  flex-direction: column;
+  gap: 2.5rem;
 }
-.space {
-  background-color: #f8f8f8;
-  height: 10px;
-}
+
 .ads,
 .hotline {
   height: 50%;
   width: 100%;
+}
+.ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hotline {
   background: url(https://phattien.com/template/images/hotline-info-people.png);
@@ -883,12 +901,14 @@ h2.service-title {
   height: 40px;
 }
 .hotline_information span {
-  font-style: bold;
-  font-size: 20px;
+  margin-top: 1.5rem;
+  color: var(--zinc-700);
+  font-size: 1.6rem;
 }
 .hotline_information .call_phone_link {
-  color: red;
-  font-size: 43px;
+  color: var(--red-500);
+  font-weight: 600;
+  font-size: 4rem;
 }
 #hotline_ads .call_box {
   display: flex;
@@ -905,49 +925,10 @@ h2.service-title {
 .ads {
   display: flex;
 }
-
-.video_ads,
 .list_ads {
-  flex: 1;
-  margin: 0 5px;
-}
-
-.video_ads {
-  height: 90%;
-  width: 65%;
-}
-
-.list_ads {
-  height: 90%;
-  width: 45%;
-}
-.video_ads {
-  position: relative;
-  height: 90%;
-  width: 65%;
-}
-
-.video_wrapper {
-  position: relative;
-  height: 100%;
   width: 100%;
-}
-
-.video_wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.play_button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 48px;
+  padding: 2rem 3.2rem;
+  height: 500px;
 }
 
 .fa-play {
@@ -959,29 +940,35 @@ h2.service-title {
 }
 .header_ads span {
   font-style: bold;
-  font-size: 30px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red-500);
 }
 .view_all {
-  font-size: 20px;
+  height: 3rem;
+  font-size: 1.6rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
   padding-top: 6px;
+  margin-right: 1rem;
   cursor: pointer;
 }
 .view_all a {
-  color: #000;
+  color: var(--zinc-700);
 }
 .view_all i {
-  border: 2px solid red;
   border-radius: 50%;
-  padding: 5px;
-  color: white;
-  background-color: red;
+  font-size: 1.8rem;
+  color: var(--red-500);
 }
 .view_all a:hover {
-  color: red;
+  color: var(--red-500);
 }
 .hotline,
 .ads {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-1);
 }
 * {
   padding: 0;
@@ -1250,7 +1237,8 @@ h2.service-title {
 }
 
 #list_link a:hover {
-  text-decoration: underline;
+  color: var(--red-500);
+  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -1259,12 +1247,14 @@ h2.service-title {
 #btn-xecontay,
 #btn-honda,
 #btn-piaggio {
-  background-color: #ef3e2a;
+  background-color: transparent;
 }
 #btn-nhapkhau a span,
 #btn-yamaha a span,
 #btn-vespa a span,
 #btn-honda a span,
-#btn-piaggio a span {
-  color: #eee;
+#btn-piaggio a span,
+#btn-xetayga a span,
+#btn-xecontay a span {
+  color: var(--red-500);
 }
