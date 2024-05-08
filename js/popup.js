@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }, 1000);
     
     popupButton.addEventListener('click', () => {
-      window.location.href = 'detail.html';
+      window.location.href = 'detail.html?userId='+localStorage.getItem("userId");
     });
   });
   window.addEventListener('load', function() {
@@ -28,3 +28,4 @@ window.addEventListener('DOMContentLoaded', function() {
     };
     canvasConfetti(confettiConfig);
   });
+  

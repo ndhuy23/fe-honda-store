@@ -5,7 +5,6 @@ function createSwiper() {
     const prevBtn = el.querySelector('.swiper-button-prev');
     const nextBtn = el.querySelector('.swiper-button-next');
     let delay = 8000;
-
     if (el.classList.contains('home-banner-slider')) {
       delay = 3000;
     }
@@ -35,6 +34,7 @@ function createSwiper() {
   const colorSpans = document.querySelectorAll('.cl-picker');
   // Vòng lặp qua từng thẻ span và thêm sự kiện click
   colorSpans.forEach(span => {
+    console.log(123)
     span.addEventListener('click', () => {
       // Xóa class 'selected' từ tất cả các thẻ span
       colorSpans.forEach(span => {
@@ -415,6 +415,7 @@ function renderPDdetail() {
           console.error('Error:', error);
         });
 }
+console.log(localStorage.getItem("user"));
 
 window.onload = renderPDdetail;
 document.addEventListener('DOMContentLoaded', createSwiper);

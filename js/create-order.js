@@ -10,16 +10,16 @@ sellButton.addEventListener('click', (event) => {
   const url = new URL(window.location.href);
   const productId = url.searchParams.get("productid");
   const clValue = selectedSpan.getAttribute('data-cl');
-  const user = localStorage.getItem("user");
+  const user = localStorage.getItem("userId");
   console.log(user);
-  if (!user) {
+  if (user === null) {
     console.log("Mục nhập 'user' không tồn tại");
     localStorage.setItem('redirectTo', `/payment/payment-page.html?productid=${productId}&colorid=${clValue}`);
     window.location.href = '/login-register.html';
     
   }else{
     console.log("Mục nhập 'user' tồn tại:", user);
-  
+    
     // Xây dựng URL mới với productId và clValue
     const newPath = `/payment/payment-page.html?productid=${productId}&colorid=${clValue}`;
     

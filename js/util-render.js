@@ -21,6 +21,5 @@ window.renderProducts =  function (products){
         </div>
       `;
     }).join('');
-      console.log(listproductHTML);
       return listproductHTML;
   }

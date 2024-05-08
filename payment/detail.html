@@ -21,6 +21,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+  <script src="/js/constants.js"></script>
+    
   </head>
   <body>
     <header>
@@ -45,7 +47,10 @@
     <div class="container-invoice">
       <div class="invoice-details">
         <h2 id="title">Các đơn hàng của bạn</h2>
-        <div class="container-details">
+        <div id="content-detail">
+          
+        </div>
+        <!-- <div class="container-details">
           <div class="information-invoice">
             <div class="name-details">
               Tên sản phẩm:
@@ -124,8 +129,9 @@
               alt="Hinhanh"
             />
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </body>
+  <script src="/js/render-detail-order.js"></script>
 </html>
