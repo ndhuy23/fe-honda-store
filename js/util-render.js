@@ -20,6 +20,7 @@ window.renderProducts =  function (products){
           </div>
         </div>
       `;
+      
     }).join('');
       return listproductHTML;
   }
