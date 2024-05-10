@@ -3525,6 +3525,9 @@ textarea.fcontrol {
   padding: 0;
   z-index: 1;
 }
+.swiper-smaller {
+  width: 93%;
+}
 .home-banner-slider .swiper-wrapper {
   margin: 0;
 }
